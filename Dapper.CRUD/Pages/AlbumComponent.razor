@@ -1,0 +1,20 @@
+﻿@page "/album"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+
+<h3>Album</h3>
+
+<SfGrid TValue="Album" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(AlbumDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Album.AlbumId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Album.Title)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Album.ArtistId)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

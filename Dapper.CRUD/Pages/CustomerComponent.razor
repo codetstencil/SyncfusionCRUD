@@ -1,0 +1,29 @@
+﻿@page "/customer"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Customer</h3>
+
+<SfGrid TValue="Customer" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(CustomerDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Customer.CustomerId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Customer.FirstName)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.LastName)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Company)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Address)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.City)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.State)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Country)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.PostalCode)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Phone)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Fax)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.Email)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Customer.SupportRepId)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

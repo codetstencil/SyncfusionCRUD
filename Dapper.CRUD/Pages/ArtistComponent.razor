@@ -1,0 +1,18 @@
+﻿@page "/"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+
+<h3>Artist</h3>
+<SfGrid TValue="Artist" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(ArtistDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Artist.ArtistId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Artist.Name)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

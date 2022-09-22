@@ -1,0 +1,84 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Dapper.CRUD
+build_property.RootNamespace = Dapper.CRUD
+build_property.ProjectDir = E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/AlbumComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/ArtistComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aXN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/CustomerComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/EmployeeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/GenreComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/InvoiceComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/InvoiceLineComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUxpbmVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/MediaTypeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFUeXBlQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/PlayListComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheUxpc3RDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/TrackComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhY2tDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fietz3nxlc
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hi6oy0czxc
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ZeraWorkspace/SyncfusionCRUD/SyncfusionCRUD/Dapper.CRUD/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

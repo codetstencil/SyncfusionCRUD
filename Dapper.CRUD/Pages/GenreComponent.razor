@@ -1,0 +1,18 @@
+﻿@page "/genre"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Genre</h3>
+
+<SfGrid TValue="Genre" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(GenreDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Genre.GenreId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Genre.Name)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

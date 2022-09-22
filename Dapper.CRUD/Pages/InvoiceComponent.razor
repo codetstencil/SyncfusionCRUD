@@ -1,0 +1,25 @@
+﻿@page "/invoice"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Invoice</h3>
+
+<SfGrid TValue="Invoice" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(InvoiceDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Invoice.InvoiceId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.CustomerId)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.InvoiceDate)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.BillingAddress)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.BillingCity)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.BillingState)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.BillingCountry)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.BillingPostalCode)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Invoice.Total)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

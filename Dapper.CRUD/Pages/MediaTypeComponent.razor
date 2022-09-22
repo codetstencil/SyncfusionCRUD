@@ -1,0 +1,18 @@
+﻿@page "/mediatype"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Media Type</h3>
+
+<SfGrid TValue="MediaType" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(MediaTypeDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(MediaType.MediaTypeId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(MediaType.Name)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

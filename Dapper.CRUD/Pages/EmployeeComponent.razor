@@ -1,0 +1,31 @@
+﻿@page "/employee"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Employee</h3>
+
+<SfGrid TValue="Employee" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(EmployeeDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Employee.EmployeeId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Employee.FirstName)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.LastName)" HeaderText="Priority" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Title)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.ReportsTo)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.BirthDate)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.HireDate)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Address)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.City)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.State)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Country)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.PostalCode)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Phone)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Fax)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Employee.Email)"  Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}

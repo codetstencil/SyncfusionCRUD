@@ -1,0 +1,25 @@
+﻿@page "/track"
+@using Dapper.CRUD.Data.Models
+@using Dapper.CRUD.Data.DAL
+
+<h3>Track</h3>
+
+<SfGrid TValue="Track" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="typeof(TrackDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Track.TrackId)" IsPrimaryKey="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Track.Name)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.AlbumId)"  Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.MediaTypeId)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.GenreId)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.Composer)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.Bytes)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.UnitPrice)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Track.PlayListTrackId)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+}
