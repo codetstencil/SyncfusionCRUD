@@ -9,7 +9,8 @@
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(PlayList.PlaylistId)" IsPrimaryKey="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(PlayList.PlaylistTrackId)" Width="100"></GridColumn>
+        <GridForeignColumn Field=@nameof(PlayList.PlaylistTrackId) HeaderText="Track Name" ForeignKeyField="TrackId" ForeignKeyValue="Name"
+                           ForeignDataSource="@trackList" Width="150"></GridForeignColumn>
         <GridColumn Field="@nameof(PlayList.Name)" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>

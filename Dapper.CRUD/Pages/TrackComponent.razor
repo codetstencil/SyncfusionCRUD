@@ -10,13 +10,18 @@
     <GridColumns>
         <GridColumn Field="@nameof(Track.TrackId)" IsPrimaryKey="true" Visible="false"></GridColumn>
         <GridColumn Field="@nameof(Track.Name)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Track.AlbumId)"  Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Track.MediaTypeId)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Track.GenreId)" Width="100"></GridColumn>
+        <GridForeignColumn Field=@nameof(Track.AlbumId) HeaderText="Album Name" ForeignKeyField="AlbumId" ForeignKeyValue="Title"
+                           ForeignDataSource="@albumList" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field=@nameof(Track.MediaTypeId) HeaderText="Media Name" ForeignKeyField="MediaTypeId" ForeignKeyValue="Name"
+                           ForeignDataSource="@mediatypeList" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field=@nameof(Track.GenreId) HeaderText="Genre Name" ForeignKeyField="GenreId" ForeignKeyValue="Name"
+                           ForeignDataSource="@genreList" Width="150"></GridForeignColumn>
+
         <GridColumn Field="@nameof(Track.Composer)" Width="100"></GridColumn>
         <GridColumn Field="@nameof(Track.Bytes)" Width="100"></GridColumn>
         <GridColumn Field="@nameof(Track.UnitPrice)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Track.PlayListTrackId)" Width="100"></GridColumn>
+        <GridForeignColumn Field=@nameof(Track.PlayListTrackId) HeaderText="PlayList Name" ForeignKeyField="PlaylistId" ForeignKeyValue="Name"
+                           ForeignDataSource="@playLists" Width="150"></GridForeignColumn>
     </GridColumns>
 </SfGrid>
 
