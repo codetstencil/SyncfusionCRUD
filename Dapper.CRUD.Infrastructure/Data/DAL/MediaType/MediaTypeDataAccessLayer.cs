@@ -1,20 +1,21 @@
 ﻿using Dapper.CRUD.Data.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Data;
 
 namespace Dapper.CRUD.Data.DAL
 {
-    public class PlayListDataAccessLayer
+    public class MediaTypeDataAccessLayer
     {
         public IConfiguration Configuration;
         private const string CHINOOK_DATABASE = "chinook";
-        private const string SELECT_QUERY = "select * from playlist";
-        public PlayListDataAccessLayer(IConfiguration configuration)
+        private const string SELECT_QUERY = "select * from mediatype";
+        public MediaTypeDataAccessLayer(IConfiguration configuration)
         {
             Configuration = configuration; //Inject configuration to access Connection string from appsettings.json.
         }
 
-        public async Task<List<PlayList>> GetPlayListAsync()
+        public async Task<List<MediaType>> GetMediaTypeAsync()
         {
             try
             {
@@ -22,36 +23,35 @@ namespace Dapper.CRUD.Data.DAL
                 using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
                 {
                     db.Open();
-                    IEnumerable<PlayList> result = await db.QueryAsync<PlayList>(SELECT_QUERY);
+                    IEnumerable<MediaType> result = await db.QueryAsync<MediaType>(SELECT_QUERY);
                     return result.ToList();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }
 
-        public async Task<int> GetPlayListCountAsync()
+        public async Task<int> GetMediaTypeCountAsync()
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                int result = await db.ExecuteScalarAsync<int>("select count(*) from playlist");
+                int result = await db.ExecuteScalarAsync<int>("select count(*) from mediatype");
                 return result;
             }
         }
 
 
-        public async Task AddPlayListAsync(PlayList playlist)
+        public async Task AddMediaTypeAsync(MediaType mediatype)
         {
             try
             {
                 using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
                 {
                     db.Open();
-                    await db.ExecuteAsync("insert into playlist (Name, PlayListTrackId) values (@Name, @PlayListTrackId)", playlist);
+                    await db.ExecuteAsync("insert into mediatype (Name) values (@Name)",mediatype);
                 }
             }
             catch (Exception ex)
@@ -60,21 +60,21 @@ namespace Dapper.CRUD.Data.DAL
             }
         }
 
-        public async Task UpdatePlayListAsync(PlayList playlist)
+        public async Task UpdateMediaTypeAsync(MediaType mediatype)
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                await db.ExecuteAsync("update playlist set Name=@Name, PlayListTrackId=@PlayListTrackId where PlayListId=@PlayListId", playlist);
+                await db.ExecuteAsync("update mediatype set Name=@Name where MediaTypeId=@MediaTypeId", mediatype);
             }
         }
 
-        public async Task RemovePlayListAsync(int playlistid)
+        public async Task RemoveMediaTypeAsync(int mediatypeid)
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                await db.ExecuteAsync("delete from playlist Where PlayListId=@PlayListId", new { PlayListId = playlistid });
+                await db.ExecuteAsync("delete from mediatype Where MediaTypeId=@MediaTypeId", new { MediaTypeId = mediatypeid });
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Dapper.CRUD.Data.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Data;
 
 namespace Dapper.CRUD.Data.DAL
@@ -16,21 +17,12 @@ namespace Dapper.CRUD.Data.DAL
 
         public async Task<List<Artist>> GetArtistAsync()
         {
-            try
-            {
-
                 using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
                 {
                     db.Open();
                     IEnumerable<Artist> result = await db.QueryAsync<Artist>(SELECT_QUERY);
                     return result.ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
         }
 
         public async Task<int> GetArtistCountAsync()

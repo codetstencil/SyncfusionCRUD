@@ -1,0 +1,12 @@
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\bin\Debug\net6.0\Dapper.CRUD.Infrastructure.deps.json
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\bin\Debug\net6.0\Dapper.CRUD.Infrastructure.dll
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\bin\Debug\net6.0\Dapper.CRUD.Infrastructure.pdb
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.csproj.AssemblyReference.cache
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.AssemblyInfoInputs.cache
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.AssemblyInfo.cs
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.csproj.CoreCompileInputs.cache
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.dll
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\refint\Dapper.CRUD.Infrastructure.dll
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\Dapper.CRUD.Infrastructure.pdb
+E:\ZeraWorkspace\SyncfusionCRUD\SyncfusionCRUD\Dapper.CRUD.Infrastructure\obj\Debug\net6.0\ref\Dapper.CRUD.Infrastructure.dll

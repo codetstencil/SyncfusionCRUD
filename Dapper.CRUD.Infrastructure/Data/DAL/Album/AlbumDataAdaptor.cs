@@ -12,7 +12,7 @@ namespace Dapper.CRUD.Data.DAL
             _dataLayer = albumDataAccessLayer;
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
             List<Album> bugs = await _dataLayer.GetAlbumAsync();
             int count = await _dataLayer.GetAlbumCountAsync();
@@ -21,13 +21,13 @@ namespace Dapper.CRUD.Data.DAL
 
         public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
         {
-            await _dataLayer.AddAlbumAsync(data as Album);
+            await _dataLayer.AddAlbumAsync((Album)data);
             return data;
         }
 
         public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
         {
-            await _dataLayer.UpdateAlbumAsync(data as Album);
+            await _dataLayer.UpdateAlbumAsync((Album)data);
             return data;
         }
 

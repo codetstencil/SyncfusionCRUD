@@ -8,7 +8,7 @@ namespace Dapper.CRUD.Pages
     public partial class AlbumComponent : ComponentBase
     {
         [Inject]
-        public ArtistDataAccessLayer artistDataAccessLayer { get; set; }
+        public ArtistDataAccessLayer? artistDataAccessLayer { get; set; }
 
         public List<Artist> artistList = new List<Artist>();
 
@@ -16,7 +16,7 @@ namespace Dapper.CRUD.Pages
         {
             if (firstRender)
             {
-                artistList = await artistDataAccessLayer.GetArtistAsync();
+                artistList = await artistDataAccessLayer!.GetArtistAsync();
             }
         }
     }

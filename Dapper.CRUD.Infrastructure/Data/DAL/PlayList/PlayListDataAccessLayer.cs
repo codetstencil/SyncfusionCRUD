@@ -1,20 +1,21 @@
 ﻿using Dapper.CRUD.Data.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Data;
 
 namespace Dapper.CRUD.Data.DAL
 {
-    public class TrackDataAccessLayer
+    public class PlayListDataAccessLayer
     {
         public IConfiguration Configuration;
         private const string CHINOOK_DATABASE = "chinook";
-        private const string SELECT_QUERY = "select * from track";
-        public TrackDataAccessLayer(IConfiguration configuration)
+        private const string SELECT_QUERY = "select * from playlist";
+        public PlayListDataAccessLayer(IConfiguration configuration)
         {
             Configuration = configuration; //Inject configuration to access Connection string from appsettings.json.
         }
 
-        public async Task<List<Track>> GetTrackAsync()
+        public async Task<List<PlayList>> GetPlayListAsync()
         {
             try
             {
@@ -22,60 +23,58 @@ namespace Dapper.CRUD.Data.DAL
                 using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
                 {
                     db.Open();
-                    IEnumerable<Track> result = await db.QueryAsync<Track>(SELECT_QUERY);
+                    IEnumerable<PlayList> result = await db.QueryAsync<PlayList>(SELECT_QUERY);
                     return result.ToList();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }
 
-        public async Task<int> GetTrackCountAsync()
+        public async Task<int> GetPlayListCountAsync()
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                int result = await db.ExecuteScalarAsync<int>("select count(*) from track");
+                int result = await db.ExecuteScalarAsync<int>("select count(*) from playlist");
                 return result;
             }
         }
 
 
-        public async Task AddTrackAsync(Track track)
+        public async Task AddPlayListAsync(PlayList playlist)
         {
             try
             {
                 using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
                 {
                     db.Open();
-                    await db.ExecuteAsync("INSERT INTO track (Name,AlbumId,MediaTypeId,GenreId,Composer,Miliseconds,Bytes,UnitPrice,PlayListTrackId) VALUES (@Name,@AlbumId,@MediaTypeId,@GenreId,@Composer,@Miliseconds,@Bytes,@UnitPrice,@PlayListTrackId)", track);
+                    await db.ExecuteAsync("insert into playlist (Name, PlayListTrackId) values (@Name, @PlayListTrackId)", playlist);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
-        public async Task UpdateTrackAsync(Track track)
+        public async Task UpdatePlayListAsync(PlayList playlist)
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                await db.ExecuteAsync("update track set Name=@Name,AlbumId=@AlbumId,MediaTypeId=@MediaTypeId,GenreId=@GenreId," +
-                    "Composer=@Composer,Miliseconds=@Miliseconds,Bytes=@Bytes,UnitPrice=@UnitPrice,PlayListTrackId=@PlayListTrackId where TrackId=@TrackId", track);
+                await db.ExecuteAsync("update playlist set Name=@Name, PlayListTrackId=@PlayListTrackId where PlayListId=@PlayListId", playlist);
             }
         }
 
-        public async Task RemoveTrackAsync(int trackid)
+        public async Task RemovePlayListAsync(int playlistid)
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(CHINOOK_DATABASE)))
             {
                 db.Open();
-                await db.ExecuteAsync("delete from track Where TrackId=@TrackId", new { TrackId = trackid });
+                await db.ExecuteAsync("delete from playlist Where PlayListId=@PlayListId", new { PlayListId = playlistid });
             }
         }
     }

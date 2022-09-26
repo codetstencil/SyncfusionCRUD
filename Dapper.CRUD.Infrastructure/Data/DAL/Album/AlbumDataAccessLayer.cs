@@ -27,9 +27,8 @@ namespace Dapper.CRUD.Data.DAL
                 return result.ToList();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }

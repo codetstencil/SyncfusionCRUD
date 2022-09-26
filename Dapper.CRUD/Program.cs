@@ -9,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddScoped<AlbumDataAccessLayer>();
 builder.Services.AddScoped<ArtistDataAccessLayer>();
 builder.Services.AddScoped<GenreDataAccessLayer>();
@@ -17,7 +16,6 @@ builder.Services.AddScoped<MediaTypeDataAccessLayer>();
 builder.Services.AddScoped<PlayListDataAccessLayer>();
 builder.Services.AddScoped<TrackDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
-builder.Services.AddScoped<BugDataAdaptor>();
 builder.Services.AddScoped<AlbumDataAdaptor>();
 builder.Services.AddScoped<ArtistDataAdaptor>();
 builder.Services.AddScoped<GenreDataAdaptor>();
